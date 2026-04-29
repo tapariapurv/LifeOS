@@ -1,23 +1,25 @@
 # Life OS
 
-## Setup
+## Run options
 
+### Option A (fastest, click-to-run)
+Open `index.html` directly in your browser.
+
+### Option B (localhost:9000)
+```bash
+python -m http.server 9000
+```
+Then open `http://localhost:9000`.
+
+### Option C (Flask + SQLite)
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python app.py
 ```
+Then open `http://127.0.0.1:5000`.
 
-Open http://127.0.0.1:5000
-
-## Database
-- SQLite database auto-creates on first app run via `schema.sql`.
-- Tables: classes, category_groups, categories, tasks, notes, goals, prompts.
-
-## Structure
-- `app.py`: Flask app + REST API + bootstrap data.
-- `schema.sql`: SQLite schema.
-- `templates/index.html`: app layout.
-- `static/css/styles.css`: design system and reusable UI styles.
-- `static/js/app.js`: dashboard state, rendering, CRUD actions.
+## Notes
+- UI is image-matched and HTML-first.
+- `index.html` is the primary entrypoint.
