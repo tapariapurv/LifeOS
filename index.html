@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Life OS</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  <link rel="stylesheet" href="static/css/styles.css" />
 </head>
 <body>
 <div class="bg-orb orb-1"></div><div class="bg-orb orb-2"></div>
@@ -14,36 +14,21 @@
     <nav id="sidebarNav"></nav>
     <button class="sidebar-item muted">⚙ Settings</button>
   </aside>
-
   <main class="main">
     <header class="topbar card">
-      <div>
-        <h1>Welcome back, Purv 👋</h1>
-        <p>Let's make today productive</p>
-      </div>
+      <div><h1>Welcome back, Purv 👋</h1><p>Let's make today productive</p></div>
       <div class="topbar-actions"><button class="icon-btn">🌙</button><button class="icon-btn">🔔</button><div class="avatar">P</div></div>
     </header>
-
     <section class="stats-row" id="statsRow"></section>
-
     <section class="dashboard-grid">
       <article class="card panel" id="tasksPanel"></article>
       <article class="card panel" id="classesPanel"></article>
       <article class="stack" id="rightStack"></article>
     </section>
-
-    <section class="card panel manage-panel">
-      <h3>Control Center</h3>
-      <div class="tabs" id="tabs"></div>
-      <div id="formArea"></div>
-    </section>
-
-    <section class="card panel">
-      <div class="panel-head"><h3>Prompts Database</h3><input id="promptSearch" class="input" placeholder="Search prompts, tags, content" /></div>
-      <div id="prompts"></div>
-    </section>
+    <section class="card panel manage-panel"><h3>Control Center</h3><div class="tabs" id="tabs"></div><div id="formArea"></div></section>
+    <section class="card panel"><div class="panel-head"><h3>Prompts Database</h3><input id="promptSearch" class="input" placeholder="Search prompts, tags, content" /></div><div id="prompts"></div></section>
   </main>
 </div>
-<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="static/js/app.js"></script>
 </body>
 </html>
