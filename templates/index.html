@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life OS</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar card">
+    <h1>Life OS</h1>
+    <nav id="sidebarNav"></nav>
+  </aside>
+  <main class="main">
+    <header class="topbar card">
+      <h2>Dashboard</h2>
+      <span id="todayLabel"></span>
+    </header>
+    <section class="grid">
+      <article class="card panel" id="tasksPanel"><h3>Tasks + Homework</h3><div id="tasks"></div></article>
+      <article class="card panel" id="classesPanel"><h3>Today's Classes</h3><div id="classes"></div></article>
+      <article class="stack">
+        <section class="card panel"><h3>Goals</h3><div id="goals"></div></section>
+        <section class="card panel"><h3>Quick Notes</h3><div class="note-input-row"><input id="noteInput" class="input" placeholder="Capture a note..."/><button class="btn" id="addNoteBtn">Add</button></div><div id="notes"></div></section>
+      </article>
+    </section>
+    <section class="card panel forms">
+      <h3>Manage</h3>
+      <div class="tabs" id="tabs"></div>
+      <div id="formArea"></div>
+    </section>
+    <section class="card panel">
+      <h3>Prompts Database</h3>
+      <input id="promptSearch" class="input" placeholder="Search prompts" />
+      <div id="prompts"></div>
+    </section>
+  </main>
+</div>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
